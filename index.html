@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Tax Calculation Form</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<form id="taxForm" class="form">
+    <div class="form-group">
+        <label for="grossIncome">Gross Annual Income:</label>
+        <input type="text" id="grossIncome" name="grossIncome">
+        <span class="error-icon" title="Please enter a valid number">!</span>
+    </div>
+    <div class="form-group">
+        <label for="extraIncome">Extra Income:</label>
+        <input type="text" id="extraIncome" name="extraIncome">
+        <span class="error-icon" title="Please enter a valid number">!</span>
+    </div>
+    <div class="form-group">
+        <label for="deductions">Deductions:</label>
+        <input type="text" id="deductions" name="deductions">
+        <span class="error-icon" title="Please enter a valid number">!</span>
+    </div>
+    <div class="form-group">
+        <label for="age">Age Group:</label>
+        <select id="age" name="age">
+            <option value="">Select Age Group</option>
+            <option value="<40"><40</option>
+            <option value="≥ 40 & < 60">≥ 40 & < 60</option>
+            <option value="≥ 60">≥ 60</option>
+        </select>
+        <span class="error-icon" title="This field is mandatory">!</span>
+    </div>
+    <button type="button" onclick="calculateTax()">Submit</button>
+</form>
+<div id="resultModal" class="modal">
+    <div class="modal-content">
+        <span class="close">&times;</span>
+        <p id="resultText"></p>
+    </div>
+</div>
+<script src="script.js"></script>
+</body>
+</html>
